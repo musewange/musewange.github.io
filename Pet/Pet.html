@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>流浪宠物领养信息系统</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<!-- 返回按钮 -->
+<button id="back-button" style="display:none;">返回</button>
+<body >
+<!-- 主界面 -->
+<div id="home-screen" style="background-image: url('Pet1.png');">
+    <nav class="navbar">
+        <h1>领养信息系统</h1>
+        <input type="search" placeholder="搜索宠物">
+    </nav>
+    <main>
+        <h2>欢迎来到流浪宠物领养信息系统</h2>
+        <p>让我们一起为流浪宠物找到温暖的家。</p>
+    </main>
+    <nav class="bottom-nav">
+        <button>领养流程</button>
+        <button>宠物档案</button>
+        <button>我的领养</button>
+        <button>帮助与支持</button>
+    </nav>
+    <nav class="bottom-nav1">
+    <button>噶米噶米组</button>
+    </nav>
+</div>
+
+<!-- 数据输入界面 -->
+<div id="data-input-screen" style="display: none;">
+    <form id="pet-info-form">
+        <h2>添加宠物信息</h2>
+        <label for="pet-name">宠物名称:</label>
+        <input type="text" id="pet-name" name="pet_name" required>
+        <label for="pet-type">种类:</label>
+        <select id="pet-type" name="pet_type">
+            <option value="dog">狗</option>
+            <option value="cat">猫</option>
+            <!-- 更多种类 -->
+        </select>
+        <label for="pet-age">年龄:</label>
+        <input type="number" id="pet-age" name="pet_age" required>
+        <label>性别:</label>
+        <label><input type="radio" name="gender" value="male"> 男</label>
+        <label><input type="radio" name="gender" value="female"> 女</label>
+        <label for="pet-health">健康状况:</label>
+        <select id="pet-health" name="pet_health" multiple>
+            <option value="healthy">健康</option>
+            <option value="special_care">需要特殊照顾</option>
+            <!-- 更多健康状况 -->
+        </select>
+        <label for="pet-photo">照片:</label>
+        <input type="file" id="pet-photo" name="pet_photo">
+        <button type="submit">提交</button>
+    </form>
+
+</div>
+<!-- 数据输出界面 -->
+<div id="data-output-screen" style="display: none;">
+
+    <h2>可领养宠物列表</h2>
+    <div class="pet-list">
+        <!-- 宠物信息将通过JavaScript动态生成 -->
+    </div>
+    <div class="pagination">
+        <!-- 分页控件将通过JavaScript动态生成 -->
+    </div>
+</div>
+
+<script src="scripts.js"></script>
+</body>
+</html>
